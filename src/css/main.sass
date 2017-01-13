@@ -1,0 +1,974 @@
+/* 1. base
+     ================================================ */
+$g-color: #011407
+$success: #3dcf7e
+$default: #eee
+$danger: #f5694e
+$info: #25aae2
+$info-dark: #0f75bd
+$info-grey: #8c9c93
+
+html
+	font-size: 100%
+	overflow-y: scroll
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-modal-wrap: 100%
+
+body
+	font: normal 14px/1 'Montserrat', Arial, Helvetica, sans-serif
+	color: $g-color
+	background-color: #f2f2f2
+	+font-smoothing
+
+a
+	color: $g-color
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: $success
+.fl 
+	float: left
+.fr
+	float: right
+
+.text-center
+	text-align: center !important
+.text-left
+	text-align: left !important
+.text-right 
+	text-align: right !important
+
+.text-success
+	color: $success
+
+	/* 2. icons
+     ================================================ */
+.ic
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	&--alerts
+		background: url('../img/icons-se578c48211.png') 0 0 no-repeat
+		width: 20px
+		height: 20px
+	&--calendar
+		background: url('../img/icons-se578c48211.png') 0 -30px no-repeat
+		width: 20px
+		height: 20px
+	&--setting
+		background: url('../img/icons-se578c48211.png') 0 -60px no-repeat
+		width: 20px
+		height: 20px
+	&--fb
+		background: url('../img/ic/facebook-icon.png') 3px 1px no-repeat
+		width: 16px
+		height: 16px
+	&--tw
+		background: url('../img/ic/twitter-icon.png') 0 2px no-repeat
+		width: 16px
+		height: 16px
+	&--gp
+		background: url('../img/ic/ic--gp.png') 0 2px no-repeat
+		width: 16px
+		height: 16px
+	&--pl
+		background: url('../img/ic/ic--plus.png') 0 2px no-repeat
+		width: 16px
+		height: 16px
+	&--play
+		background: url('../img/ic/ic--play.png') 0 -1px no-repeat
+		width: 16px
+		height: 16px
+	&--volume
+		background: url('../img/ic/ic--volume.png') 0 -1px no-repeat
+		width: 16px
+		height: 16px
+	&--expand
+		background: url('../img/ic/ic--expand.png') 0 0 no-repeat
+		width: 16px
+		height: 16px
+	&--previous
+		background: url('../img/ic/previous-icon.png') 0 0 no-repeat
+		width: 16px
+		height: 16px
+	&--star
+		background: url('../img/ic/star.png') 0 0 no-repeat
+		width: 14px
+		height: 14px
+	&--starhalf
+		background: url('../img/ic/starhalf.png') 0 0 no-repeat
+		width: 14px
+		height: 14px
+	&--shop
+		background: url('../img/ic/cart-icon.png') 0 0 no-repeat
+		width: 24px
+		height: 20px
+
+/* 3. buttons
+     ================================================ */
+.btn, a.btn
+	display: inline-block
+	vertical-align: middle
+	padding: 14px
+	font-size: 14px
+	font-weight: 700
+	line-height: 14px
+	text-decoration: none
+	text-transform: uppercase
+	color: #fff
+	border: none
+	+br(4px)
+	letter-spacing: 0
+	&--success 
+		background-color: $success
+		&:hover 
+			background-color: darken($success, 7%)
+	&--info 
+		background-color: $info
+		&:hover 
+			background-color: darken($info, 7%)
+	&--info-dark 
+		background-color: $info-dark
+		&:hover 
+			background-color: darken($info-dark, 7%)
+	&--danger 
+		background-color: $danger
+		&:hover 
+			background-color: darken($danger, 7%)
+	&--default 
+		background-color: $default
+		&:hover 
+			background-color: darken($default, 7%)
+	&--block 
+		display: block
+		width: 100%
+		text-align: center
+	&--sm
+		padding: 8px
+		font-size: 12px
+		line-height: 12px
+
+/* 4. forms
+     ================================================ */
+input[type='text'], 
+input[type='number'], 
+input[type='email'], 
+input[type='tel'], 
+input[type='search'], 
+input[type='url'], 
+input[type='file'], 
+input[type='password'], 
+textarea
+	height: 40px
+	padding: 0 10px
+	margin-bottom: 15px
+	color: #8c9c93
+	font-size: 14px
+	background: #fff
+	border: 2px solid #eee
+	+br(4px)
+	+placeholder  
+		color: #8c9c93
+		font-size: 14px
+	+placeholder-color(#8c9c93)
+	&.input__ic 
+		display: block
+		width: 100%
+		padding-left: 40px
+		background-repeat: no-repeat
+		background-position: 15px center
+		&--user 
+			background-position: 17px center
+			background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAASCAYAAABvqT8MAAABiElEQVQoU42SSyhEYRTH/+fOdG2kbFA2lFIeNTflUXMnJSs7pUYs7EQhCxbU9SEWbEReKxuhFCs7Sq7yKHOnpilJsZFH2chmhrlH93ZnundMzLf6zjn/3zn/zvcRXKclOlnuZ98igA4nffRNqbGLwNxTWkbpS9OlKJILzBsAVe4mAO6TCanhqll8WPkMEDK0EQaWssROyKO6MmvXMoAa1ZbBGMoJEFb0wMywBwhGtG4i7OQCCNxzpszatcwEsJCCRmqfiDrdEDMfnCu+LpAwvYAVMShoaL1EbEPMdHCuzGyDwL+25O7aFpsoteKT+vnXbIseS6ph9oMwDqDCET6CsaAr0qbHUm1cyMWJ1G62f5eNw3dZCsdrRdKeEDKmVhk8mPsNnCzRhh6YHiA1ImpAZgyA9CdgrYSlOlINbQ3AwD/idHndAm4BVOcJ3FlAAoCcJ5AkNao9g1GWD8DAqzXB+vt7AAr/gT4BhO21tl6LMtOf6mOgHUSVAEoc+A3MDyA69n1JW6eN4uUHTdx/FP1n3qEAAAAASUVORK5CYII=")
+		&--pass
+			background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAABn0lEQVQ4T7WSvUscYRCHn9lDRUijaBMIxMLqEL1rtHCPJEhAkk4CGsRC0c4/QMR13RDSpE0lWgTMpTBVkkZRwdWIIq4i2gh+VBaClQp+7E7Y9evuckcOwelm5jcPv3fmFXIivmWXVp773Yh0AXU37U1Uvx6Xxca34vZF5ohkJubaQDVS8hNozAXf5Cvo5Vs3+enotn8PUMRct+aBZkBBJkB+QKAIbSidQKhfdBscEwk114UozDWrDWEySlQ73OSH79nuhtoRSV/35Z2bHIm09wDP+gZ0IMy4DU5LvieY3tA0SNhLuwnnfRYgtW4tqdIkMDKfcOx8gJRn2QrDwLKbcJoiwItVu8o3gnqEUaBGhTECI8v+HcwI2kXpAfZQemOBsSGmZ+0Bzwts/X/l/RAQbfOh8ZgAnQrUGIyJlCr+MMjrfC4LOTgsN85qp+o/n4ZDrTv9ZScnFbvA01xIXoDC3ELCeZUpbvasWYGXRQGAU1/9+J/kx4NwILU5+EyvYtvAk2IBoW5f0C+KlAB9hU79mFco7meEDn4Bb4qT/6P6/RejEZYrSSymhAAAAABJRU5ErkJggg==")
+		&--mail
+			background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAA0ElEQVQoU62SuY0CUQyGPxtoggRaWFKOEBKa4BBVcLaB2KWJSSCFSWfoYBEBTQDPq7cwEsEIpBkcOfB/+LelGU93QINstZdmPLVs2DvKE/wC1YwkR8Hm2ohoq7qRQRcovSG7CATO6XJfYyutw2R8c/oT1hbnejQri1hPYJji6miwMpN1MltQ108yuIIFzmQZfunGO0hc+T5R8309dh0VG4F4t8W0EE8YK4d8e6V/UDQrKzZAGACV5xVfXeEGBI9hr1ZIy+YjZ8z9B7kJ8rxy+Ac3wlpYl953rgAAAABJRU5ErkJggg==")
+		
+	&:focus 
+		outline: none
+		box-shadow: none
+		border-color: $success
+
+
+textarea 
+	height: auto
+	resize: none
+	min-height: 100px
+
+label 
+	display: block
+	line-height: 22px
+	a 
+		color: $success 
+		&:hover 
+			text-decoration: underline
+
+input[type="checkbox"]
+	+check(14px, 14px, sprite-checkbox)
+
+.checkbox 
+	&--left 
+		label
+			position: relative
+			display: block
+			padding-left: 20px
+			letter-spacing: -0.5px
+			&:before 
+				position: absolute !important
+				left: 0
+
+/* 5. header
+     ================================================ */
+.clr 
+	+clr
+
+.wrapper
+	width: 970px
+	padding: 0 15px
+	margin: 100px auto 
+
+
+.box 
+	padding: 20px
+	margin-bottom: 30px
+	background-color: white
+	+br(4px) 
+	+bs( 0 1px 1px rgba(223, 223, 223, 0.75))
+	&--lg 
+		padding: 20px 40px
+		.nav  
+			padding: 22px 0
+	&--br 
+		padding-top: 60px
+		padding-bottom: 60px
+		border-top: 4px solid $success
+	&__title 
+		margin-bottom: 40px
+		margin-top: 0
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+		text-align: center
+
+
+.nav 
+	float: left
+	margin: 0 
+	padding: 0
+	list-style-type: none
+	li 
+		display: inline-block
+		& + li 
+			margin-left: 16px
+		a 
+			font-weight: 700
+			text-transform: uppercase
+			&:hover 	
+				color: $success
+
+
+.status 
+	padding: 14px 0
+	float: right
+	.offline, .online
+		position: relative
+		display: inline-block
+		width: 30px
+		height: 30px
+		border: 2px solid $success 
+		+br(50%)
+		background: #fff
+		cursor: pointer
+		&.active:after 
+			content: ''
+			display: block
+			position: absolute
+			top: 3px 
+			left: 3px
+			right: 3px
+			bottom: 3px
+			background: $success 
+			+br(50%)
+	.offline
+		border-color: $danger
+		&.active:after 
+			background: $danger
+
+
+
+.profile	
+	&__img 
+		position: relative
+		float: left
+		img 
+			display: block
+			width: 60px
+			height: 60px
+			border: 5px solid #f2f2f2
+			background-color: #f2f2f2
+			+br(50%)
+	&__info 
+		margin-left: 67px 
+		padding-top: 13px
+		span 	
+			color: #4e5f55
+			display: block
+	&__name 
+		margin: 5px 0 0 0
+		color: $success
+		font-size: 18px
+		font-weight: 700
+	&__descr 
+		margin: 2px 0 15px 0
+		color: #011407
+		font-weight: 700
+		a 
+			color: inherit
+	&--wrap
+		text-align: center
+		.profile__img
+			display: inline-block
+			float: none
+			img
+				width: 120px
+				height: 120px
+			.status
+				position: absolute
+				top: 0
+				right: 0
+				padding: 0
+			&:before
+				content: ''
+				position: absolute 
+				top: -10px
+				left: -10px
+				+png(profile-line)
+		.profile__name 
+			font-size: 24px
+			margin-top: 15px
+	.social
+		margin-bottom: 5px
+		.btn 
+			width: 30px
+			text-align: center 
+
+
+.nav-icon 
+	float: right
+	padding: 20px 0
+	&__item 
+		position: relative
+		display: inline-block
+		margin-left: 16px
+		kbd 
+			position: absolute
+			top: -10px
+			right: -8px
+			z-index: 1
+			display: inline-block
+			padding: 0 5px
+			height: 18px
+			font-size: 12px
+			font-weight: 700
+			line-height: 18px
+			color: #fff
+			background-color: $success
+			+br(8px)
+		&--calendar 
+			kbd 
+				right: -12px
+
+.navbar 
+	padding-top: 13px
+	padding-bottom: 13px
+	.devider
+		position: relative
+		&:after 	
+			content: ''
+			position: absolute
+			right: -34px
+			top: -3px
+			display: block
+			width: 2px
+			height: 40px
+			background-color: #eee
+	.profile
+		float: left
+		&__img 
+			img 
+				width: 19px
+				height: 19px
+				border: none
+		&__info 
+			margin-left: 26px 
+			padding-top: 1px
+		&__name 
+			margin: 0
+	&-form 
+		position: relative
+		width: 191px
+		float: right
+		margin-right: 10px
+		input[type="text"]
+			height: 34px
+			width: 100%
+			display: block
+			margin-bottom: 0
+		.form-button 	
+			position: absolute
+			top: 10px 
+			right: 10px
+			display: block
+			width: 16px
+			height: 16px
+			border: none
+			background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB00lEQVQ4T5XTMWgTURgH8P//YtJoLVIEW4fS1UGoIIiLiAiKLlIocRV68bDp3ZCexq23tXC52t5pJOQi6pgKgkMGEQTBQVGHugkdVEQqDtVK0Xh3nzhEvGvD6Rvfe//f997jfUSP4TTco6LQgOAEgGEAawAeA7xpqtNPujEm861WK/N+49OCiJwDMR8EUXsQ+Y/ryo+hDJSzoFQgeDgQ5QxN035uAaq+twjiwM7vykSpVPqWLGDV67v6M51lCt6ZRf1SDFjw3SMCLgfcPFiZrGz0up591+5nJ/8a4IUYUPW92yBempO61yvcnbebbpHCk0lgNQrl1BXNWE0DnFs3RkSiF0lgPQhzo1c17UsaYLWs3O6veze3nIARz8xcnH6TBlT966MQeRoD7IZ3h5AVs2g46YA3BZHj8RM0lg6DygOEuTFT0z73Qubr9T3ZTGcFIue3+QfuIwB9CPvGt0PmarXBHdnwPolXpqqXY4DT9GZFYAnQJnAIwJIgaged7IdsPtiPiKcBmCTvjQzsKxcKhfAP0A0TuDyj6lWn6Y4JOCWCY/zdC8QaBM8USK2sGs9jvZAMpz3g3+u0G55FYhYi5r+8fhKn43tvBVg0Vf3a/1Tu7v0FUcTAvLLhJdQAAAAASUVORK5CYII=') no-repeat center
+	.nav-icon, .profile	
+		padding: 7px 0
+	.nav 
+		padding: 10px 0
+
+
+.login 
+	padding-bottom: 40px
+	.social 
+		float: right
+	&__btn 
+		width: 150px
+		margin-right: 15px
+	&__footer 
+		+justify
+		a 
+			display: inline-block
+			font-size: 14px
+			line-height: 14px
+			font-weight: 700
+			color: #011407
+			text-align: left
+			&:hover
+				text-decoration: none
+				color: $success
+
+.or 
+	display: inline-block
+	vertical-align: middle
+	color: #8c9c93
+	font: italic 14px Arial, sans-serif
+	text-transform: uppercase
+
+
+.social
+	.btn 
+		width: 42px
+		text-align: center
+
+.follow
+	color: $success
+	font-weight: 700
+
+
+.line 
+	height: 2px
+	margin: 40px 0
+	clear: both
+	background-color: #eee
+
+
+.progress 
+	margin-bottom: 35px
+	&__count 
+		float: right
+	&__wrap 
+		height: 8px
+		margin-top: 8px
+		background-color: #eee
+		+br(4px)
+		& > div 
+			height: 8px
+			background-color: $success
+			+br(4px)
+	&--lg
+		margin-bottom: 15px
+		.progress__title
+			color: #8c9c93
+			font-weight: 700
+		.progress__wrap, .progress__wrap > div
+			height: 22px
+
+
+
+.nav-prev
+	float: left
+	text-transform: uppercase
+	font-size: 14px
+	font-weight: 700
+	line-height: 18px
+	&:after 	
+		content: ''
+		position: absolute
+		right: -10px
+		top: -13px
+		display: block
+		width: 2px
+		height: 28px
+		background-color: #eee
+
+.nav-next
+	position: relative
+	float: right
+	text-transform: uppercase
+	font-size: 14px
+	font-weight: 700
+	line-height: 18px
+
+.ic--prev
+	margin-right: 5px
+	width: 13px
+	height: 8px
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAJCAYAAADpeqZqAAAAiElEQVQoU2NkIAMwwvT0z+8X+POHZf///0yJZWnZF/CZBdYE08DIyHCxJCU3gZDljKRqABnI2D170gFGRkb7////T2BiYvxAyJb//xk+wDUxMDBMBAkQ0sTA8P8D2Hl//7IcYGBguF+SkhtIWBMDAzwgIBr/ny9JyUskpBElyEEa//1jSiAU5ADn1EFcMPfNWwAAAABJRU5ErkJggg==")
+
+.ic--next
+	margin-left: 5px
+	width: 13px
+	height: 8px
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAJCAYAAADpeqZqAAAAhklEQVQoU53QsQ2DUAwE0LsPfRiBDcIIZBQmANaAVCAaiAQjhA0YiQHQd2QkGhp/xfU96XzEH0fLNOOQkX6O4+NVF/WueRNp6P3pFxE8LxiE7pDt1FXO8WHV9F4SkhWA7UQAEwuR0EwpImtwvXbqviTTKDryIKRDAMgU6IIm0smd88sF9I0fwzEyhks+NngAAAAASUVORK5CYII=")
+
+.page-nav
+	margin-top: -7px
+	.devider
+		position: relative
+		&:after 	
+			content: ''
+			position: absolute
+			right: -50px
+			top: -5px
+			display: block
+			width: 2px
+			height: 25px
+			background-color: #eee
+
+.prev 
+	float: left
+	text-transform: uppercase
+	font-weight: 700
+	&:hover
+		color: $success
+
+.next
+	float: right
+	text-transform: uppercase
+	font-weight: 700
+	&:hover
+		color: $success
+
+.subscribe
+	padding-bottom: 50px
+	& img
+		margin-top: -5px
+		width: 71px
+		height: 71px
+		margin-right: 10px
+	& h5
+		font-size: 18px
+		font-weight: 700
+		line-height: 22px
+		&:hover
+			color: $success
+	& .progress__wrap
+		margin-top: 2px
+		float: left
+		width: 178px
+		height: 34px
+		div
+			height: 34px
+			position: relative
+			a
+				position: absolute
+				top: 10px
+				left: 17px
+				color: #fff
+				text-transform: uppercase
+			span
+				position: absolute
+				top: 10px
+				left: 135px
+				font-weight: 700
+
+.info
+	padding-bottom: 90px
+	& img
+		width: 71px
+		height: 71px
+		margin-right: 10px
+	& h5
+		padding-top: 10px
+		font-size: 18px
+		font-weight: 700
+		line-height: 22px
+		&:hover
+			color: $success
+	& .location
+		margin-top: -10px
+		color: #8c9c93
+		.ic--loc
+			width: 10px
+			height: 14px
+			margin-top: -6px
+			background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAABNUlEQVQoU3WSUU7CQBCG/ym8iyeQGwAnEG+gJ7AkW190KyRbX8VXwVRpfLE14An0CHgC4QZwg/redMzULRaC8zKT2W9mdv5dgrVxEp0CuAbQtak5gCej9EfJkATjJJoBOLfJpfWtX88zo/yeRGQ7vgNY5rnj3lxcLuTg/uW57Ti5NJGiM5kgsBy28tzplGA51hZ8MWMReLojMANYG6WbJVT14yRaATgySpOFOTXKP9wHj+IoJcJBAY/iyZyIjplxEnhaFNhYuQ8zfwae3xW4T0QhwCng9I26ehP64XXiMiMEqMHMg8DzHymcho0sq69k1L5rMOO7Xs+ag94gLXQexdGQCLf/wHeBp4eFzpUXLCTcKVjXallbum7BpaZVeFf7Tee/pWhaPLJdqlq8BVf+CYzS7u4OP6xqjA8AV1UFAAAAAElFTkSuQmCC") no-repeat
+	.devider-hor
+		position: relative
+		margin-bottom: 40px
+		&:after 	
+			content: ''
+			position: absolute
+			top: 90px
+			display: block
+			width: 260px
+			height: 2px
+			background-color: #eee
+	.profile__count
+		text-align: center
+		& p
+			color: $success
+			font-size: 24px
+			font-weight: 700
+			& + p
+				margin-top: -18px
+				color: #011407
+				font-size: 14px
+	.devider
+		position: relative
+		&:after 	
+			content: ''
+			position: absolute
+			right: 0
+			top: 25px
+			display: block
+			width: 2px
+			height: 45px
+			background-color: #eee
+
+.video
+	overflow: hidden
+	+br(4px 4px 0 0)
+	&__poster
+		position: relative
+		img
+			width: 100%
+			display: block
+	&__cover
+		+coverdiv
+		background-color: rgba(61, 207, 126, 0.9)
+	&__panel
+		display: table
+		width: 100%
+		.panel__item
+			display: table-cell
+			vertical-align: middle
+			padding: 0 5px
+			width: 1%
+			&.br
+				padding: 0 10px
+				border-left: 2px solid #eee
+			&:first-child
+				padding-left: 0
+			&:last-child
+				padding-right: 0
+			&--slider
+				width: 100%
+			&--volume
+				padding: 0 10px 0 0
+				.progress
+					width: 67px
+	.progress, .progress__wrap
+		margin: 0
+	.btn-replay
+		+coverdiv
+		margin: auto
+		+png(replay-icon)
+		width: 32px
+		height: 32px
+	.panel-btn, .btn-replay
+		padding: 0
+		font-weight: 700
+		color: $info-grey
+		font-size: 18px
+		border: none
+		background-color: transparent
+		&.active
+			color: $success
+	.box
+		+br(0 0 4px 4px)
+	.timer
+		color: $info-grey
+
+
+.play__title
+	padding: 10px 20px 20px 20px
+	p
+		margin: 0px
+		font-weight: 700
+		line-height: 22px
+		float: left
+	&--nowpl
+		text-transform: uppercase
+		color: #8c9c93
+	&--creat
+		font-size: 18px
+	.btn-playlist
+		float: right
+		margin: -10px 0 25px 0
+		&--prev
+			background: url('../img/ic/previous-icon.png') 0 0 no-repeat
+			width: 17px
+			height: 17px
+			border: none
+			margin-right: 15px
+		&--next
+			background: url('../img/ic/next-icon.png') 0 0 no-repeat
+			width: 17px
+			height: 17px
+			border: none
+.play__number
+	padding: 0 20px
+	clear: both
+	width: 100%
+	height: 50px
+	background: #eee
+	&--title
+		font-size: 14px
+		font-weight: 700
+		line-height: 22px
+		text-transform: uppercase
+		float: left
+		color: $info-grey
+	&--sum
+		padding-top: 3px
+		float: right
+		color: $success
+.select__playlist
+	select
+		+br(0 0 4px 4px)
+		width: 100%
+		display: block
+		border: none
+		option
+			width: 100%
+			padding: 20px
+			color: $info-grey
+			border-bottom: 2px solid #eee
+			&:last-child
+				border: none
+			.option__value
+				float: left
+			.option__time
+				float: right
+
+.product__img
+	+br(4px 4px 0 0)
+	position: relative
+	.product__new
+		width: 83px
+		height: 84px
+		position: absolute
+		right: 0px
+		top: 0px
+.product__panel
+	+br(0 0 4px 4px)
+	&--goods
+		float: left
+		width: 195px
+	&--title
+		color: $g-color
+		font-size: 18px
+		font-weight: 700
+		text-overflow: ellipsis
+	&--category
+		color: $info-grey
+		font-size: 14px
+	&--price
+		margin-bottom: 20px
+		float: right
+		background: $success
+		padding: 7px 9px 6px 11px
+		+br(4px)
+		color: #fff
+		font-size: 18px
+	.product__panel--btn
+		width: 100%
+		height: 42px
+		clear: both
+		button
+			width: 120px
+			height: 42px
+			border: none
+			+br(4px)
+			text-transform: uppercase
+		&--cart
+			float: left
+			&:hover 
+				background-color: darken($success, 7%)
+		&--wishlist
+			float: right
+			&:hover 
+				background-color: darken($info-grey, 7%)
+				color: #fff
+
+
+.producth
+	.producth_img
+		width: 48%
+		float: left
+	.producth__panel
+		+br(0 4px 4px 0)
+		width: 51.6%
+		float: right
+		margin-bottom: 20px
+		&--goods
+			float: left
+			width: 225px
+		&--title
+			color: $g-color
+			font-size: 18px
+			font-weight: 700
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: clip
+		&--category
+			color: $info-grey
+			font-size: 14px
+		&--price
+			margin-bottom: 35px
+			float: right
+			background: $success
+			padding: 7px 9px 6px 11px
+			+br(4px)
+			color: #fff
+			font-size: 18px
+		&--description
+			width: 278px
+			clear: both
+			line-height: 18px
+			color: $info-grey
+			margin-bottom: 22px
+		&--rewiev
+			color: $g-color
+			width: 184px
+			margin: 0
+			float: left
+			margin-bottom: 45px
+		&--stars
+			float: right
+			width: 82px
+			a
+				margin-left: -2px
+			a:first-child
+				margin-left: 0
+		&--count
+			clear: both
+			float: left
+			width: 98px
+			height: 42px
+			background: #eee
+			+br(4px)
+			padding: 6px 12px
+			button
+				width: 18px
+				height: 18px
+				background: $default
+				border: none
+				img
+					margin: -8px
+			input
+				width: 30px
+				height: 30px
+		&--add
+			float: right
+
+.onsale
+	ul
+		margin: 0 
+		padding: 0
+		li
+			display: inline-block
+			margin-right: 15px
+		li:first-child
+			width: auto
+			height: auto
+			padding-top: 5px
+			color: $g-color
+			font-size: 24px
+			font-weight: 700
+			line-height: 18px
+			text-transform: uppercase
+		.last__li
+			margin-right: 0px
+
+.shop
+	width: 100%
+	margin-bottom: 10px
+	&__card
+		float: left
+		width: 180px
+		height: auto
+		i
+			float: left
+			margin-top: -6px
+			margin-right: 5px
+		p
+			margin: 0
+	&__check
+		float: right
+		width: auto
+		height: auto
+		text-transform: uppercase
+	&::after 
+    content: '' 
+    position: absolute
+    left: 245px
+    top: 50px
+    border: 10px solid transparent
+    border-top: 10px solid #fff
+
+.shoplist__value
+	//width: 100%
+	&--product
+		width: 420px - 74px
+		height: 74px
+		margin-right: 0px
+		img
+			float: left
+			margin-right: 15px
+		p
+			float: left
+			padding-top: 0px
+			margin-bottom: 5px
+			font-size: 18px
+			font-weight: 700
+	&--price
+		float: right
+		width: 60px
+		p
+			padding: 0
+			margin: 0
+			width: 20px
+
+.sale__img
+	width: auto
+	height: auto
+	position: relative
+	.box--brb
+	border-bottom: 4px solid #3dcf7e
+	span
+		position: absolute
+		top: 6px
+		left: 6px
+		font-size: 14px
+
+.aftersale
+	width: 100%
+	display: block
+	& > span
+		text-align: center
+		float: none

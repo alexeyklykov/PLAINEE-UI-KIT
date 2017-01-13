@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+  <link rel="stylesheet" media="all" href="css/bootstrap.css">
+	<link rel="stylesheet" media="all" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  	<![endif]-->
+</head>
+<body>
+
+
+<div class="wrapper">
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="box box--lg clr">
+				<ul class="nav">
+					<li><a href="#">PROFILE</a></li>
+					<li><a href="#">REQUESTS</a></li>
+					<li><a href="#">ELEMENTS</a></li>     
+				</ul>
+				<div class="status">
+					<span class="offline"></span>
+					<span class="online active"></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="box box--lg clr">
+				<div class="profile fl">
+					<a href="#" class="profile__img"><img src="img/user.png" alt=""></a>
+					<div class="profile__info">
+						<span>logged in as</span>
+						<h4 class="profile__name"><a href="#">Andrei Josan</a></h4>
+					</div>
+				</div>
+
+				<div class="nav-icon">
+					<a href="#" class="nav-icon__item">
+						<i class="ic ic--setting"></i>
+					</a>
+					<a href="#" class="nav-icon__item">
+						<i class="ic ic--alerts"></i>
+						<kbd>4</kbd>
+					</a>
+					<a href="#" class="nav-icon__item nav-icon__item--calendar">
+						<i class="ic ic--calendar"></i>
+						<kbd>21</kbd>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="navbar box box--lg">
+		<div class="row">
+			<div class="col-xs-3">
+				<div class="profile devider">
+					<a href="#" class="profile__img"><img src="img/user.png" alt=""></a>
+					<div class="profile__info">
+						<h4 class="profile__name"><a href="#">Andrei Josan</a></h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<ul class="nav devider">
+					<li><a href="#">PROFILE</a></li>
+					<li><a href="#">REQUESTS</a></li>
+					<li><a href="#">ELEMENTS</a></li>     
+				</ul>
+			</div>
+			<div class="col-xs-5">
+				<div class="nav-icon">
+					<a href="#" class="nav-icon__item">
+						<i class="ic ic--setting"></i>
+					</a>
+					<a href="#" class="nav-icon__item">
+						<i class="ic ic--alerts"></i>
+						<kbd>4</kbd>
+					</a>
+					<a href="#" class="nav-icon__item nav-icon__item--calendar">
+						<i class="ic ic--calendar"></i>
+						<kbd>21</kbd>
+					</a>
+				</div>
+
+				<form action="#" class="navbar-form">
+					<input type="text" placeholder="Search...">
+					<button type="submit" class="form-button"></button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-5">
+			<div class="login box box--lg box--br">
+				<h4 class="box__title">ACCESS ACCOUNT</h4>
+				<form action="#">
+					<input type="text" class="input__ic input__ic--user">
+					<input type="password" class="input__ic input__ic--pass">
+					<div class="clr">
+						<div class="social">
+							<a href="" class="btn btn--info"><i class="ic ic--tw"></i></a>
+							<a href="" class="btn btn--info-dark"><i class="ic ic--fb"></i></a>
+						</div>
+						<button type="submit" class="btn btn--success login__btn">LOGIN</button>
+						<span class="or">or</span>
+					</div>
+
+					<div class="line"></div>
+
+					<footer class="login__footer">
+						<a href="#">Forgot password</a>
+						<a href="#"><span class="text-success">REGISTER</span> new account</a>
+					</footer>
+				</form>
+			</div>
+		</div>
+		<div class="col-xs-7">
+			<div class="box box--lg box--br">
+				<h4 class="box__title">REGISTER A NEW ACCOUNT</h4>
+				<form action="#">
+					<div class="row">
+						<div class="col-xs-6"><input type="text" class="input__ic input__ic--user" placeholder="desired username"></div>
+						<div class="col-xs-6"><input type="text" class="input__ic input__ic--mail" placeholder="enter e-mail address"></div>
+						<div class="col-xs-6"><input type="password" class="input__ic input__ic--pass" placeholder="desired password"></div>
+						<div class="col-xs-6"><input type="password" class="input__ic input__ic--pass" placeholder="******"></div>
+					</div>
+
+					<div class="progress">
+						<span class="progress__count"><span class="text-success">77</span>/100</span>
+						<span class="progress__title">Password strength:</span>
+						<div class="progress__wrap">
+							<div style="width: 77%"></div>
+						</div>
+					</div>
+					
+					
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="checkbox checkbox--left">
+								<input type="checkbox" id="check">
+								<label for="check">Registering means that you agree to our <a href="#">Terms of Service</a></label>
+							</div>
+						</div>
+						<div class="col-xs-6"><button type="submit" class="btn btn--success btn--block">REGISTER</button></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-4">
+			<div class="box box--lg box--br">
+				<h4 class="box__title">my skills</h4>
+
+				<div class="progress progress--lg">
+						<span class="progress__count"><span class="text-success">90%</span></span>
+						<span class="progress__title">Photoshop</span>
+						<div class="progress__wrap">
+							<div style="width: 90%"></div>
+						</div>
+					</div>
+
+					<div class="progress progress--lg">
+						<span class="progress__count"><span class="text-success">65%</span></span>
+						<span class="progress__title">Illustrator</span>
+						<div class="progress__wrap">
+							<div style="width: 65%"></div>
+						</div>
+					</div>
+
+					<div class="progress progress--lg">
+						<span class="progress__count"><span class="text-success">75%</span></span>
+						<span class="progress__title">HTML & CSS</span>
+						<div class="progress__wrap">
+							<div style="width: 75%"></div>
+						</div>
+					</div>
+
+					<div class="progress progress--lg">
+						<span class="progress__count"><span class="text-success">40%</span></span>
+						<span class="progress__title">PHP</span>
+						<div class="progress__wrap">
+							<div style="width: 40%"></div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="box box--lg box--br">
+				<div class="profile profile--wrap">
+					<a href="#" class="profile__img">
+						<img src="img/profile-image.png" alt="">
+						<div class="status">
+							<span class="online active"></span>
+						</div>
+					</a>
+					<h4 class="profile__name"><a href="#">Andrei Josan</a></h4>
+					<p class="profile__descr">web & UI/UX designer</p>
+					<div class="social">
+						<a href="#" class="btn btn--sm btn--info"><i class="ic ic--tw"></i></a>
+						<a href="#" class="btn btn--sm btn--info-dark"><i class="ic ic--fb"></i></a>
+						<a href="#" class="btn btn--sm btn--danger"><i class="ic ic--gp"></i></a>
+						<a href="#" class="btn btn--sm btn--default"><i class="ic ic--pl"></i></a>
+					</div>
+					<a href="#" class="follow">+Follow</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4">
+			<div class="box">
+				<div class="page-nav">
+					<a href="#" class="prev devider">&#8592; previous</a>
+					<a href="#" class="next">next &#8594;</a>
+				</div>
+			</div>
+
+			<div class="box subscribe">
+				<div class="profile profile__subscribe">
+					<a href="#" class="profile__img">
+						<img src="img/profile-image.png" alt="">
+					</a>
+					<h5 class="profile__name"><a href="#">Andrei Josan</a></h5>
+					<div class="progress progress--lg">
+						<div class="progress__wrap">
+							<div style="width: 65%">
+								<a href="#" class="subscribe__btn">Subscribe</a>
+								<span class="subscribe__count">624</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="box info">
+				<div class="profile profile__subscribe devider-hor">
+					<a href="#" class="profile__img">
+						<img src="img/profile-image.png" alt="">
+					</a>
+					<h5 class="profile__name"><a href="#">Andrei Josan</a></h5>
+					<div class="location">
+						<p><i class="ic ic--loc"></i> Bucharest, Romania</p>
+					</div>
+					</div>
+
+					<div class="col-xs-4 profile__count devider">
+						<p>245</p>
+						<p>friends</p>
+					</div>
+					<div class="col-xs-4 profile__count devider">
+						<p>7654</p>
+						<p>views</p>
+					</div>
+					<div class="col-xs-4 profile__count">
+						<p>809</p>
+						<p>likes</p>
+					</div>
+
+				</div>
+			</div>
+			
+			</div>
+
+	<div class="row">
+		<div class="col-xs-8">
+			<div class="video">
+				<div class="video__poster">
+					<img src="img/video-img.png" alt="">
+					<div class="video__cover">
+						<button class="btn-replay"></button>
+					</div>
+				</div>
+				<div class="video__panel box">
+					<div class="panel__item">
+						<button class="panel-btn"><i class="ic ic--play"></i></button>
+					</div>
+					<div class="panel__item panel__item--slider">
+						<div class="progress">
+							<div class="progress__wrap">
+								<div style="width:50%"></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel__item"><span class="timer">2:30/4.58</span></div>
+					<div class="panel__item br">
+						<button class="panel-btn"><i class="ic ic--volume"></i></button>
+					</div>
+					<div class="panel__item panel__item--volume">
+						<div class="progress">
+							<div class="progress__wrap">
+								<div style="width:50%"></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel__item br">
+						<button class="panel-btn active">HD</button>
+					</div>
+					<div class="panel__item br">
+						<button class="panel-btn"><i class="ic ic--expand"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="col-xs-4">
+			<div class="box--null">
+				<div class="play__title">
+					<p class="play__title--nowpl">now playing</p>
+					<p class="play__title--creat">Creat video of the...</p>
+					<div class="btn-playlist">
+						<button class="btn-playlist--prev"></button>
+						<button class="btn-playlist--next"></button>
+					</div>
+				</div>
+				<div class="play__number">
+					<p class="play__number--title">VIDEOS IN THIS PLAYLIST:</p>
+					<p class="play__number--sum">(13)</p>
+				</div>
+				<div class="select__playlist">
+					<select name="playlist" class="playlist" size="4">
+						<option value="">
+							<p class="option__value">Cat videos everywhere</p>
+							<p class="option__time">8:27 <button class="ic ic--time"></button></p>
+						</option>
+						<option value="">
+							<p class="option__value">Flat design explained in a...</p>
+							<p class="option__time">5:00 <button class="ic ic--time"></button></p>
+						</option>
+						<option value="">
+							<p class="option__value">Top videos currently You...</p>
+							<p class="option__time">21:58 <button class="ic ic--time"></button></p>
+						</option>
+						<option value="">
+							<p class="option__value">Travelling to Romania</p>
+							<p class="option__time">1.40 <button class="ic ic--time"></button></p>
+						<option value="">
+							<p class="option__value">Cat videos everywhere</p>
+							<p class="option__time">8:27 <button class="ic ic--time"></button></p>
+						</option>
+						<option value="">
+							<p class="option__value">Flat design explained in a...</p>
+							<p class="option__time">5:00 <button class="ic ic--time"></button></p>
+						</option>
+						<option value="">
+							<p class="option__value">Top videos currently You...</p>
+							<p class="option__time">21:58 <button class="ic ic--time"></button></p>
+						</option>
+						<option value="">
+							<p class="option__value">Travelling to Romania</p>
+							<p class="option__time">1.40 <button class="ic ic--time"></button></p>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-4">
+			<div class="product">
+				<div class="product__img">
+					<img src="img/product-image.png" alt="">
+					<span class="product__new"><img src="img/product-new.png" alt=""></span>
+				</div>
+				<div class="product__panel box">
+					<div class="product__panel--goods">
+						<a href="#" class="product__panel--title">WooCommerce Hood</a>
+						<a href="#" class="product__panel--category">Streetwear / Hoodies</a>
+					</div>
+					<div class="product__panel--price">49$</div>
+					<div class="product__panel--btn">
+						<button class="product__panel--btn--cart btn btn--success">cart</button>
+						<button class="product__panel--btn--wishlist btn">wishlist</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-8">
+				<div class="producth">
+					<div class="producth_img">
+						<img src="img/product-image2.png" alt="">
+					</div>
+					<div class="producth__panel box">
+						<div class="producth__panel--goods">
+							<a href="#" class="producth__panel--title">WooCommerce Hoodie</a>
+							<a href="#" class="producth__panel--category">Streetwear / Hoodies</a>
+					</div>
+					<div class="producth__panel--price">49$</div>
+					<p class="producth__panel--description">Lorem ipsum dolor sit amet, an sed scripta oporteat maiestatis, vix an lorem insolens, brute tamquam assuev sed an. Pri id iriure accusam.</p>
+					<p class="producth__panel--rewiev">3 reviews from customers</p>
+					<div class="producth__panel--stars">
+						<a href="#"><i class="ic ic--star"></i></a>
+						<a href="#"><i class="ic ic--star"></i></a>
+						<a href="#"><i class="ic ic--star"></i></a>
+						<a href="#"><i class="ic ic--star"></i></a>
+						<a href="#"><i class="ic ic--starhalf"></i></a>
+					</div>
+					<div class="producth__panel--count">
+						<button class="producth__panel--minus"><img src="img/ic/minus-icon.png" alt=""></button>
+						<input type="text" value="1">
+						<button class="producth__panel--plus"><img src="img/ic/plus-icon.png" alt=""></button>
+					</div>
+					<button class="producth__panel--add btn btn--success">add to card</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-8">
+			<div class="box onsale">
+				<ul>
+						<li>ON SALE:</li>
+						<li><a href="#"><img src="img/product-image-sale1.png" alt=""></a></li>
+						<li><a href="#"><img src="img/product-image-sale2.png" alt=""></a></li>
+						<li><a href="#"><img src="img/product-image-sale3.png" alt=""></a></li>
+						<li><a href="#"><img src="img/product-image-sale4.png" alt=""></a></li>
+						<li class="last__li"><a href="#"><img src="img/product-image-sale5.png" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!--<div class="row">
+		<div class="col-xs-6">
+			<div class="box">
+				<div class="shop">
+					<div class="shop__card">
+						<i class="ic ic--shop"></i>
+						<p>SHOPPING CART <span class="shop__card--count">(5)</span></p>
+					</div>
+					<div class="shop__check">
+						<a href="#">checkout</a>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+				<div class="shoplist">
+					<div class="shoplist__value">
+						<div class="shoplist__value--product">
+							<img src="img/product-image-sale1.png" alt="">
+							<p class="product__panel--title">Nickel Creek - Love of...</p>
+							<a href="#" class="product__panel--category">Music / Song</a>
+						</div>
+						<div class="shoplist__value--price">
+							<p><span class="span__count">1</span>x</p>
+							<div class="aproduct__panel--price">19$</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-3">
+			<div class="sale__img box--brb">
+				<span class="product__panel--price">SALE</span>
+				<img src="img/image.png" alt="">
+			</div>
+		</div>
+		<div class="col-xs-3">
+			<div class="box box--brb">
+				<div class="aftersale">
+					<span class="product__panel--price">49$</span>
+				</div>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+
+
+
+<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+
+<!--[if lte IE 9]>
+	<script src="js/placeholder.min.js"></script>
+<![endif]-->
+
+</body>
+</html>
